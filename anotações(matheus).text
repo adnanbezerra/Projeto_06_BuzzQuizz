@@ -1,0 +1,5 @@
+// modelo da caixa de um quizz
+<li>
+    <img style="width: 100%; border-radius: 10px; z-index: -1;" src="https://d17lbu6bbzbdc8.cloudfront.net/wp-content/uploads/2019/11/10220644/os-simpsons-10-melhores-episodios-de-acordo-com-a-imdb.jpg">
+    <h2>Título do quizz bem aqui (example)</h2>
+</li>
