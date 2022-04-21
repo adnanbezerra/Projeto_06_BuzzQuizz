@@ -35,7 +35,7 @@ main{
     max-width: 1100px;
     display: flex;
     flex-direction: column;
-    gap: 50px 0px;
+    gap: 20px 0px;
     margin: 110px 0px;
     padding: 0px 30px;
 }
