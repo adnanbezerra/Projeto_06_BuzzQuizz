@@ -24,7 +24,7 @@ function loadWebAndList (response){
     <main class="screenList">
         <div class="quizzesUserEmpty">
             <p>Você não criou nenhum <br> quizz ainda :(</p>
-            <button onclick="createQuizz()">Criar Quizz</button>
+            <button onclick="iniciarCriação()">Criar Quizz</button>
         </div>
 
         <div class="quizzesUser hidden"></div>
@@ -48,7 +48,4 @@ function loadWebAndList (response){
     })
 }
 
-function createQuizz() {
-    resetPage();
-}
 

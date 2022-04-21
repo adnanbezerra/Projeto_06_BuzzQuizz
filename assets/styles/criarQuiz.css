@@ -1,0 +1,41 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.entradaQuiz {
+    width: 570px;
+    height: 50px;
+    border: 1px solid #D1D1D1;
+    font-size: 19px;
+    font-style: italic;
+    color: #BABABA;
+    background-color: white;
+    padding-left: 24px;
+
+    margin: 4px 0;
+}
+.comece {
+    margin: 70px 0;
+
+    display: flex;
+    justify-content: center;
+
+    font-weight: bold;
+    font-size: 23px;
+}
+
+.botaoCriarQuiz {
+    width: 367px;
+    height: 54px;
+
+    margin-top: 110px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background-color: #EC362D;
+    font-size: 21px;
+    color: #FFF5F4;
+}
