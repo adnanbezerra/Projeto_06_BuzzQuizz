@@ -1,0 +1,64 @@
+.screenQuizz{
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.topQuizz{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 62px;
+    background-position: center center;
+    background-size: cover;
+    height: 150px;
+    width: 100%;
+    position: relative;
+}
+.topQuizz > h2 {
+    position: absolute;
+    color: white;
+    font-size: 2em;
+    text-align: center;
+}
+
+.boxQuestion{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    width: 100%;
+    background-color: #E5E5E5;
+    max-width: 760px;
+    gap: 10px;
+}
+.question{
+    color: white;
+    font-size: 23px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #434CA0;
+    height: 130px;
+    text-align: center;
+    padding: 10px;
+}
+.answers{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.answers div{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 200px;
+    width: 100%;
+    max-width: 350px;
+    background-position: center;
+    background-size: cover;
+}
+.answers div h2{
+    font-size: 20px;
+    font-weight: bold;
+}

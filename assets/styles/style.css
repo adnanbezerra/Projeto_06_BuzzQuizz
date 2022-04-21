@@ -6,7 +6,6 @@
 }
 
 body {
-    background-color: white;
     font-family:  'Roboto', sans-serif;
     display: flex;
     flex-direction: column;
@@ -30,7 +29,7 @@ header h1 {
     margin: 13px 0px;
 }
 
-main{
+.screenList{
     width: 100%;
     max-width: 1100px;
     display: flex;
@@ -75,11 +74,12 @@ main{
 }
 .quizzesList > li{
     display: flex;
-    max-width: 380px;
+    width: 340px;
     height: 181px;
     border-radius: 10px;
     background-image: linear-gradient(to top, black , transparent 130px);
     position: relative;
+    cursor: pointer;
 }
 .quizzesList > img {
     display: flex;
