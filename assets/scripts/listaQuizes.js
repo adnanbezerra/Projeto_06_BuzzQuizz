@@ -1,6 +1,7 @@
-const API = 'https://mock-api.driven.com.br/api/v6/buzzquizz/quizzes';
+const API = 'https://mock-api.driven.com.br/api/v4/buzzquizz/quizzes';
 const bodyDom = document.querySelector("body");
 const containerQuizz = document.querySelector(".quizzesContainer");
+let quizzId;
 
 takeQuizzesApi();
 
@@ -38,13 +39,16 @@ function loadWebAndList (response){
     </main>
     `
     const apiData = response.data;
+    console.log(apiData);
     const containerQuizzesList = document.querySelector(".quizzesList");
-    apiData.map(quizz => {
+    apiData.map(
+        quizz => {
         return containerQuizzesList.innerHTML +=`
         <li onclick='openquizz(this)'>
             <img style="width: 100%; border-radius: 10px; z-index: -1;" src="${quizz.image}">
             <h2>${quizz.title}</h2>
-        </li>`
+            <div class="hidden idQuizz">${quizz.id}<div>
+        </li>`;
     })
 }
 

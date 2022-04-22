@@ -2,6 +2,9 @@
     margin: 30px;
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
     width: 100%;
 }
 .topQuizz{
@@ -30,7 +33,7 @@
     width: 100%;
     background-color: #E5E5E5;
     max-width: 760px;
-    gap: 10px;
+    gap: 30px;
 }
 .question{
     color: white;
@@ -38,7 +41,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #434CA0;
     height: 130px;
     text-align: center;
     padding: 10px;
@@ -55,10 +57,14 @@
     height: 200px;
     width: 100%;
     max-width: 350px;
-    background-position: center;
-    background-size: cover;
+    background-position: center top;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 .answers div h2{
     font-size: 20px;
     font-weight: bold;
+}
+.hidden{
+    display: none;
 }

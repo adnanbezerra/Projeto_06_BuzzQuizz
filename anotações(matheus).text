@@ -1,6 +1,36 @@
-// modelo da caixa de um quizz
+// modelo da caixa de um quizz;
 <li>
     <img style="width: 100%; border-radius: 10px; z-index: -1;" src="https://d17lbu6bbzbdc8.cloudfront.net/wp-content/uploads/2019/11/10220644/os-simpsons-10-melhores-episodios-de-acordo-com-a-imdb.jpg">
     <h2>Título do quizz bem aqui (example)</h2>
 </li>
 
+// modelo da caixa de pergunta de uma quizz;
+
+        <div class="boxQuestion">
+
+            <div style="background-color: #434CA0;" class="question">
+                <h2>Em qual animal Olho-Tonto Moody transfigurou Malfoy?</h2>
+            </div>
+
+            <div class="answers">
+                <div>
+                    <div style="background-image: url('https://blog.cobasi.com.br/wp-content/uploads/2022/01/gato-filhote-de-2-meses-pode-ficar-sozinho-meio.jpg');" ></div>
+                    <h2>Gato</h2>
+                </div>
+
+                <div>
+                    <div style="background-image: url('https://blog.cobasi.com.br/wp-content/uploads/2022/01/gato-filhote-de-2-meses-pode-ficar-sozinho-meio.jpg');" ></div>
+                    <h2>Gato</h2>
+                </div>
+                <div>
+                    <div style="background-image: url('https://blog.cobasi.com.br/wp-content/uploads/2022/01/gato-filhote-de-2-meses-pode-ficar-sozinho-meio.jpg');" ></div>
+                    <h2>Gato</h2>
+                </div>
+
+                <div>
+                    <div style="background-image: url('https://blog.cobasi.com.br/wp-content/uploads/2022/01/gato-filhote-de-2-meses-pode-ficar-sozinho-meio.jpg');" ></div>
+                    <h2>Gato</h2>
+                </div>
+            </div>
+
+        </div>
