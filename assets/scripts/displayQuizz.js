@@ -1,6 +1,7 @@
 const imgBlack = 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Black_flag.svg/1024px-Black_flag.svg.png';
 let nameQuizz;
 let quizz;
+
 function comparador (){
     return Math.random() - 0.5;
 }
@@ -10,7 +11,7 @@ function searchQuizz (){
 }
 function quizzPromise (response){
     const apiData = response.data;
-    console.log(apiData);
+    //console.log(apiData);
     quizzSelected = apiData.filter( quizz => {if(quizz.title === `${nameQuizz}`){return true}});
     console.log(quizzSelected);
     bodyDom.innerHTML += `
@@ -22,12 +23,14 @@ function quizzPromise (response){
         <main class="screenQuizz">
 
         </main>`;
+    
+    // * loop que adiciona as caixa de perguntas no DOM
     const screenQuizz = document.querySelector(".screenQuizz");
     for (let i = 0 ; i < quizzSelected[0].questions.length; i++){
-        let qualMelhorAnimeAnswers = quizzSelected[0].questions[i].answers;
+        let quizzSelectedAnswers = quizzSelected[0].questions[i].answers;
         let arrayRandom = [0,1,2,3];
         arrayRandom = arrayRandom.sort(comparador);
-        console.log(qualMelhorAnimeAnswers[i]);
+        //console.log(quizzSelectedAnswers[i]);
         screenQuizz.innerHTML+=`
         <div class="boxQuestion">
             <div style="background-color: ${quizzSelected[0].questions[i].color};" class="question">
@@ -35,40 +38,54 @@ function quizzPromise (response){
             </div>
 
             <div class="answers">
-                <div onlclick="clickQuizz()">
-                    <div style="background-image: url('${qualMelhorAnimeAnswers[arrayRandom[0]].image}');" ></div>
-                    <h2>${qualMelhorAnimeAnswers[arrayRandom[0]].text}</h2>
+
+                <div class="answer" onclick='clickQuizz(this)'>
+                    <div style="background-image: url('${quizzSelectedAnswers[arrayRandom[0]].image}');" >
+                    <img class="imgAnswer hidden" src="./assets/images/branco-opaco"> </div>
+                    <h2>${quizzSelectedAnswers[arrayRandom[0]].text}</h2>
+                    <span class="hidden">${quizzSelectedAnswers[arrayRandom[0]].isCorrectAnswer}</span>
                 </div>
 
-                <div onlclick="clickQuizz()>
-                    <div style="background-image: url('${qualMelhorAnimeAnswers[arrayRandom[1]].image}');" ></div>
-                    <h2>${qualMelhorAnimeAnswers[arrayRandom[1]].text}</h2>
-                </div>
-                <div onlclick="clickQuizz()>
-                    <div style="background-image: url('${qualMelhorAnimeAnswers[arrayRandom[2]].image}');" ></div>
-                    <h2>${qualMelhorAnimeAnswers[arrayRandom[2]].text}</h2>
+                <div class="answer" onclick='clickQuizz(this)'>
+                    <div style="background-image: url('${quizzSelectedAnswers[arrayRandom[1]].image}');" >
+                    <img class="imgAnswer hidden" src="./assets/images/branco-opaco"> </div>
+                    <h2>${quizzSelectedAnswers[arrayRandom[1]].text}</h2>
+                    <span class="hidden">${quizzSelectedAnswers[arrayRandom[1]].isCorrectAnswer}</span>
                 </div>
 
-                <div onlclick="clickQuizz()>
-                    <div style="background-image: url('${qualMelhorAnimeAnswers[arrayRandom[3]].image}');" ></div>
-                    <h2>${qualMelhorAnimeAnswers[arrayRandom[3]].text}</h2>
+                <div class="answer" onclick='clickQuizz(this)'>
+                    <div style="background-image: url('${quizzSelectedAnswers[arrayRandom[2]].image}');" >
+                    <img class="imgAnswer hidden" src="./assets/images/branco-opaco"> </div>
+                    <h2>${quizzSelectedAnswers[arrayRandom[2]].text}</h2>
+                    <span class="hidden">${quizzSelectedAnswers[arrayRandom[2]].isCorrectAnswer}</span>
+                </div>
+
+                <div class="answer" onclick='clickQuizz(this)'>
+                    <div style="background-image: url('${quizzSelectedAnswers[arrayRandom[3]].image}');" >
+                    <img class="imgAnswer hidden" src="./assets/images/branco-opaco"> </div>
+                    <h2>${quizzSelectedAnswers[arrayRandom[3]].text}</h2>
+                    <span class="hidden">${quizzSelectedAnswers[arrayRandom[3]].isCorrectAnswer}</span>
                 </div>
             </div>
-
         </div>
         `
     }
 }
-
 function openquizz(element){
     resetPage();
     nameQuizz = element.querySelector("h2").innerText;
     let idQuizz = element.querySelector(".hidden.idQuizz");
-    console.log("nome do quiz clicado: ", nameQuizz);
-    console.log('id do quizz clicado: ',idQuizz.innerText);
+    console.log("Nome do quiz clicado: ", nameQuizz);
+    console.log('Id do quizz clicado: ',idQuizz.innerText);
     searchQuizz();
 }
 
-function clickQuizz(){
-    
+function clickQuizz(element){
+    const tagImg = element.parentNode.querySelectorAll(".imgAnswer");
+    for (let i = 0; i < tagImg.length; i++){
+        tagImg[i].classList.remove('hidden');
+    }
+    element.querySelector(".imgAnswer").classList.add('hidden');
+    document.querySelectorAll(".answer").removeAttribute("onclick"); // ! ajeitar isso aq para tira o onlick após escolher uma resposta
+    c('clicou em uma resposta', tagImg[0]);
 }

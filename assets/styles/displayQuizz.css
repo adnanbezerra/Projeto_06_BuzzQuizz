@@ -49,17 +49,28 @@
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 .answers div{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 10px;
-    height: 200px;
+    height: 270px;
     width: 100%;
     max-width: 350px;
-    background-position: center top;
-    background-size: contain;
+    background-position: center center;
+    background-size: cover;
     background-repeat: no-repeat;
+    position: relative;
+}
+.imgAnswer{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
 }
 .answers div h2{
     font-size: 20px;
