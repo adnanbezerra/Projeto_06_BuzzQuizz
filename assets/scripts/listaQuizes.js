@@ -2,7 +2,6 @@ const API = 'https://mock-api.driven.com.br/api/v4/buzzquizz/quizzes';
 const c = console.log.bind(document);
 const bodyDom = document.querySelector("body");
 const containerQuizz = document.querySelector(".quizzesContainer");
-let quizzId;
 
 takeQuizzesApi();
 
@@ -29,15 +28,19 @@ function loadWebAndList (response){
         <div class="quizzesUser hidden"></div>
 
         <div class="quizzesContainer">
+
             <h2>Todos os Quizzes</h2>
+
             <br>
+
             <ul class="quizzesList">
             </ul>
+
         </div>
     </main>
     `
     const apiData = response.data;
-    console.log('Quizzes api: ',apiData);
+    console.log('Quizze, dados da api: ',apiData);
     const containerQuizzesList = document.querySelector(".quizzesList");
     apiData.map(
         quizz => {
