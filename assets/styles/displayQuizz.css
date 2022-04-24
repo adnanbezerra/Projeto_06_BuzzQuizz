@@ -26,7 +26,6 @@
 }
 
 .boxQuestion{
-    padding: 10px;
     display: flex;
     flex-direction: column;
     padding: 25px;
@@ -81,6 +80,35 @@
 }
 .answerFalse{
     color: red;
+}
+.resultBox{
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    width: 100%;
+    background-color: #E5E5E5;
+    max-width: 760px;
+    gap: 20px;
+}
+.resultText{
+    display: flex;
+    gap: 0px 20px;
+    justify-content: center;
+}
+.resultText > p {
+    max-width: 50%;
+    font-weight: bold;
+    font-size: 19px;
+    color: #484848;
+    line-height: 1.5em;
+}
+.resultText > div {
+    height: 270px;
+    width: 100%;
+    max-width: 50%;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 .hidden{
     display: none;

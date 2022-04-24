@@ -1,6 +1,9 @@
 const imgBlack = 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Black_flag.svg/1024px-Black_flag.svg.png';
 let nameQuizz;
 let quizzId;
+let quizzSelected;
+let boxsQuestion = document.querySelectorAll(".boxQuestion");
+let rightAnswers = 0;
 
 function comparador (){
     return Math.random() - 0.5;
@@ -77,14 +80,16 @@ function quizzPromise (response){
             </div>
         </div>
         `
+        boxsQuestion = document.querySelectorAll(".boxQuestion");
     }
 }
 function clickAnswer(element){
+    verifyAnswer(element);
     const whiteImg = element.parentNode.querySelectorAll(".imgAnswer");
     const boxAnswers = element.parentNode.querySelectorAll(".answer");
     const trueOrFalse = element.parentNode.querySelectorAll("span");
     const titleAnswer = element.parentNode.querySelectorAll("h2");
-    const boxsQuestion = document.querySelectorAll(".boxQuestion");
+    const currentBoxQuestion = element.parentNode.parentNode;
     for (let i = 0; i < whiteImg.length; i++){
         whiteImg[i].classList.remove('hidden');
         boxAnswers[i].removeAttribute('onclick');
@@ -95,16 +100,45 @@ function clickAnswer(element){
         }
     }
     for (let i = 0; i < boxsQuestion.length; i++){
-        if (element.parentNode.parentNode.innerHTML === boxsQuestion[i].innerHTML){
+        if (currentBoxQuestion.innerHTML === boxsQuestion[i].innerHTML){
             setTimeout(scroll => (boxsQuestion[i+1].scrollIntoView()), 2000);
             c('box seguinte: ',boxsQuestion[i+1]);
-        } 
+        }
     }
-    
-
-    c(boxsQuestion[0].innerHTML === element.parentNode.parentNode.innerHTML);
-
     const answerClicked = element.querySelector(".imgAnswer");
     answerClicked.classList.add('hidden');
-    c('Clicou em uma resposta');
+    renderResultQuizz();
+}
+function verifyAnswer (el){
+    const trueOrFlase = el.querySelector("span");
+    if (trueOrFlase.innerText === 'true'){
+        rightAnswers++;
+    }
+}
+function renderResultQuizz (){
+    const isAllResponded = document.querySelectorAll(".imgAnswer.hidden");
+    let result = Math.round(( 100 / boxsQuestion.length) * rightAnswers);
+    if (isAllResponded.length === 3){
+        if (result >= 50){
+            renderResultDom(result, quizzSelected[0].levels[1].title, quizzSelected[0].levels[1].image, quizzSelected[0].levels[1].text);
+        } else {
+            renderResultDom(result, quizzSelected[0].levels[0].title, quizzSelected[0].levels[0].image, quizzSelected[0].levels[0].text);
+        }
+        const resultBox = document.querySelector(".resultBox");
+        setTimeout(scroll => (resultBox.scrollIntoView()), 2000);
+    }
+}
+function renderResultDom (percent, text1, img, text2){
+    const screenQuizz = document.querySelector(".screenQuizz");
+    screenQuizz.innerHTML+=`
+        <div class="resultBox">
+            <div style="background-color: #EC362D;" class="question">
+            <h2>${percent}% de acerto: ${text1}</h2>
+            </div>
+            <div class="resultText">
+                <div style="background-image: url('${img}');" ></div>
+                <p>${text2}</p>
+            </div>
+        </div>
+        `
 }

@@ -34,3 +34,18 @@
             </div>
 
         </div>
+
+// * modelo caixa de finalização de quizz;
+
+<div class="resultBox">
+    <div style="background-color: #EC362D;" class="question">
+        <h2>Em qual animal Olho-Tonto Moody transfigurou Malfoy?</h2>
+    </div>
+
+    <div class="resultText">
+        <div style="background-image: url('https://blog.cobasi.com.br/wp-content/uploads/2022/01/gato-filhote-de-2-meses-pode-ficar-sozinho-meio.jpg');" ></div>
+
+        <p>Parabéns Potterhead! Bem-vindx a Hogwarts, aproveite o loop infinito de comida e clique no botão abaixo para usar o vira-tempo e reiniciar este teste.
+        </p>
+    </div>
+</div>
