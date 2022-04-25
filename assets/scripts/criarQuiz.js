@@ -7,7 +7,7 @@ const comeceComeço =
         <input type="value" class="entradaQuiz quantidadeNiveis" placeholder="Quantidade de níveis do quizz" min="2">
         <button class="botaoCriarQuiz" onclick="primeiraParte()">Prosseguir para criar perguntas</button>`;
 
-iniciarCriação()
+//iniciarCriação()
 function iniciarCriação() {
     const container = document.querySelector(".container");
     container.innerHTML = ""

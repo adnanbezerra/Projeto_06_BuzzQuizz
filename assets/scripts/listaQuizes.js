@@ -4,7 +4,6 @@ const bodyDom = document.querySelector("body");
 const containerQuizz = document.querySelector(".quizzesContainer");
 
 takeQuizzesApi();
-
 // * ESSA FUNÇÃO ZERA A PÁGINA
 function resetPage (){
     bodyDom.innerHTML = `<header><h1>BuzzQuizz</h1></header>`;
@@ -52,5 +51,3 @@ function loadWebAndList (response){
         </li>`;
     })
 }
-
-
