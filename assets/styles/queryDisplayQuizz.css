@@ -1,0 +1,15 @@
+@charset "UTF -8";
+
+@media (max-width: 782px){
+    .answers div{
+        height: 258px;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 683px){
+    .answers div{
+        height: 200px;
+        max-width: 250px;
+    }
+}
