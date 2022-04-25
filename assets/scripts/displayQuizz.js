@@ -141,12 +141,18 @@ function renderResultDom (percent, title, img, text2){
 
         </div>
         <div class='finalButtons'>
-            <button onclick="restartQuizz()">Reiniciar Quizz</button>
-            <button class='buttonHome' onclick="backHome()">Voltar pra Home</button>
+            <button class='restartButton' onclick="restartQuizz()">Reiniciar Quizz</button>
+            <button class='homeButton' onclick="backHome()">Voltar pra Home</button>
         </div>
         `
 }
+function restartQuizz(){
+    resetPage();
+    rightAnswers = 0;
+    searchQuizz();
+}
 function backHome(){
     resetPage();
+    rightAnswers = 0;
     takeQuizzesApi();
 }

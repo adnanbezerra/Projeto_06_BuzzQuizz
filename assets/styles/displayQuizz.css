@@ -110,6 +110,36 @@
     background-size: cover;
     background-repeat: no-repeat;
 }
+.finalButtons{
+    margin-top: -50px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.restartButton{
+    padding: 10px 45px;
+    border-radius: 15px;
+    color: white;
+    font-size: 21px;
+    border: none;
+    background-color: #EC362D;
+    cursor: pointer;
+}
+.restartButton:hover{
+    background-color: #b72b23;
+}
+.homeButton{
+    padding: 10px 45px;
+    border-radius: 15px;
+    color: #818181;
+    font-size: 21px;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}
+.homeButton:hover{
+    background-color: rgb(229, 229, 229);
+}
 .hidden{
     display: none;
 }
