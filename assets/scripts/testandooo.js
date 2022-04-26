@@ -84,9 +84,11 @@ function pageLevels (){
                 <input class="textNivel" type="text" placeholder="Descrição do Nível" >
 
             </details>
-            <button onclick="finishQuizz()">Finizalizar Quizz</button>
         </div>`;
     }
+    bodyDom.innerHTML+=`
+    <button onclick="finishQuizz()">Finizalizar Quizz</button>
+    `
     
 }
 function finishQuizz(){
