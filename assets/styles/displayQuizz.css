@@ -45,22 +45,52 @@
     height: 130px;
     text-align: center;
     padding: 10px;
+    word-break: break-word;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .answers{
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-}
-.answers div{
+    padding: 5px 0px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 10px;
-    height: 252.5px;
-    width: 350px;
+}
+section{
+    display: flex;
+    /*border: 3px dashed black;*/
+    gap: 0px 10px;
+    width: 100%;
+}
+.answer{
+    height: 175px;
+    width: 100%;
+    /*border: 4px solid green;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px 0px;
+}
+.answer > div{
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -72,10 +102,36 @@
     height: 100%;
     z-index: 1;
 }
-.answers div h2{
-    font-size: 20px;
+.answers h2{
+    width: 90%;
+    text-align: center;
+    font-size: 100%;
     font-weight: bold;
+    word-break: break-word;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .answerTrue{
     color: green;
 }

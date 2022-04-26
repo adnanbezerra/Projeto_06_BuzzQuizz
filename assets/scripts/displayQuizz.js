@@ -51,33 +51,35 @@ function quizzPromise (response){
 
             <div class="answers">
 
-                <div class="answer" onclick='clickAnswer(this)'>
-                    <div style="background-image: url('${quizzSelectedAnswers[arrayRandom[0]].image}');" >
-                    <img class="imgAnswer hidden" src="./assets/images/branco-opaco"> </div>
-                    <h2>${quizzSelectedAnswers[arrayRandom[0]].text}</h2>
-                    <span class="hidden">${quizzSelectedAnswers[arrayRandom[0]].isCorrectAnswer}</span>
-                </div>
+                <section>
+                    <div class="answer" onclick='clickAnswer(this)'>
+                        <div style="width: 100%; height: 100%; background-image: url('${quizzSelectedAnswers[arrayRandom[0]].image}');" >
+                        <img style="width: 100%; height: 100%;" class="imgAnswer hidden" src="./assets/images/branco-opaco"> </div>
+                        <h2>${quizzSelectedAnswers[arrayRandom[0]].text}</h2>
+                        <span class="hidden">${quizzSelectedAnswers[arrayRandom[0]].isCorrectAnswer}</span>
+                    </div>
+                    <div class="answer" onclick='clickAnswer(this)'>
+                        <div style="width: 100%; height: 100%; background-image: url('${quizzSelectedAnswers[arrayRandom[1]].image}');" >
+                        <img style="width: 100%; height: 100%;" class="imgAnswer hidden" src="./assets/images/branco-opaco"> </div>
+                        <h2>${quizzSelectedAnswers[arrayRandom[1]].text}</h2>
+                        <span class="hidden">${quizzSelectedAnswers[arrayRandom[1]].isCorrectAnswer}</span>
+                    </div>
+                </section>
 
-                <div class="answer" onclick='clickAnswer(this)'>
-                    <div style="background-image: url('${quizzSelectedAnswers[arrayRandom[1]].image}');" >
-                    <img class="imgAnswer hidden" src="./assets/images/branco-opaco"> </div>
-                    <h2>${quizzSelectedAnswers[arrayRandom[1]].text}</h2>
-                    <span class="hidden">${quizzSelectedAnswers[arrayRandom[1]].isCorrectAnswer}</span>
-                </div>
-
-                <div class="answer" onclick='clickAnswer(this)'>
-                    <div style="background-image: url('${quizzSelectedAnswers[arrayRandom[2]].image}');" >
-                    <img class="imgAnswer hidden" src="./assets/images/branco-opaco"> </div>
-                    <h2>${quizzSelectedAnswers[arrayRandom[2]].text}</h2>
-                    <span class="hidden">${quizzSelectedAnswers[arrayRandom[2]].isCorrectAnswer}</span>
-                </div>
-
-                <div class="answer" onclick='clickAnswer(this)'>
-                    <div style="background-image: url('${quizzSelectedAnswers[arrayRandom[3]].image}');" >
-                    <img class="imgAnswer hidden" src="./assets/images/branco-opaco"> </div>
-                    <h2>${quizzSelectedAnswers[arrayRandom[3]].text}</h2>
-                    <span class="hidden ">${quizzSelectedAnswers[arrayRandom[3]].isCorrectAnswer}</span>
-                </div>
+                <section>
+                    <div class="answer" onclick='clickAnswer(this)'>
+                        <div style="width: 100%; height: 100%; background-image: url('${quizzSelectedAnswers[arrayRandom[2]].image}');" >
+                        <img style="width: 100%; height: 100%;" class="imgAnswer hidden" src="./assets/images/branco-opaco"> </div>
+                        <h2>${quizzSelectedAnswers[arrayRandom[2]].text}</h2>
+                        <span class="hidden">${quizzSelectedAnswers[arrayRandom[2]].isCorrectAnswer}</span>
+                    </div>
+                    <div class="answer" onclick='clickAnswer(this)'>
+                        <div style="width: 100%; height: 100%; background-image: url('${quizzSelectedAnswers[arrayRandom[3]].image}');" >
+                        <img style="width: 100%; height: 100%;" class="imgAnswer hidden" src="./assets/images/branco-opaco"> </div>
+                        <h2>${quizzSelectedAnswers[arrayRandom[3]].text}</h2>
+                        <span class="hidden ">${quizzSelectedAnswers[arrayRandom[3]].isCorrectAnswer}</span>
+                    </div>
+                </section>
             </div>
         </div>
         `
@@ -86,11 +88,11 @@ function quizzPromise (response){
 }
 function clickAnswer(element){
     verifyAnswer(element);
-    const whiteImg = element.parentNode.querySelectorAll(".imgAnswer");
-    const boxAnswers = element.parentNode.querySelectorAll(".answer");
-    const trueOrFalse = element.parentNode.querySelectorAll("span");
-    const titleAnswer = element.parentNode.querySelectorAll("h2");
-    const currentBoxQuestion = element.parentNode.parentNode;
+    const whiteImg = element.parentNode.parentNode.querySelectorAll(".imgAnswer");
+    const boxAnswers = element.parentNode.parentNode.querySelectorAll(".answer");
+    const trueOrFalse = element.parentNode.parentNode.querySelectorAll("span");
+    const titleAnswer = element.parentNode.parentNode.querySelectorAll("h2");
+    const currentBoxQuestion = element.parentNode.parentNode.parentNode;
     for (let i = 0; i < whiteImg.length; i++){
         whiteImg[i].classList.remove('hidden');
         boxAnswers[i].removeAttribute('onclick');
