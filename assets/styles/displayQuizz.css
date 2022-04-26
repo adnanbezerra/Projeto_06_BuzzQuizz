@@ -28,6 +28,7 @@
 }
 
 .boxQuestion{
+    border-radius: 5px;
     display: flex;
     flex-direction: column;
     padding: 25px;
@@ -46,25 +47,8 @@
     text-align: center;
     padding: 10px;
     word-break: break-word;
+    border-radius: 5px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .answers{
     padding: 5px 0px;
@@ -95,6 +79,21 @@ section{
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
+    border-radius: 5px;
+}
+.answer > div:hover{
+    animation: float 1s ease-in-out infinite;
+}
+@keyframes float {
+    0%{
+        transform: scale(100%);
+    }
+    50%{
+        transform: scale(102%);
+    }
+    100%{
+        transform: scale(100%);
+    }
 }
 .imgAnswer{
     position: absolute;
@@ -111,27 +110,6 @@ section{
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .answerTrue{
     color: green;
 }
@@ -146,6 +124,7 @@ section{
     background-color: #E5E5E5;
     max-width: 760px;
     gap: 20px;
+    animation: float 2s ease-in-out infinite;
 }
 .resultText{
     display: flex;
