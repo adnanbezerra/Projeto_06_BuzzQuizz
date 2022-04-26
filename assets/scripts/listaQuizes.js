@@ -1,10 +1,9 @@
-const API = 'https://mock-api.driven.com.br/api/v6/buzzquizz/quizzes';
+const API = 'https://mock-api.driven.com.br/api/v2/buzzquizz/quizzes';
 const c = console.log.bind(document);
 const bodyDom = document.querySelector("body");
 const containerQuizz = document.querySelector(".quizzesContainer");
 
 takeQuizzesApi();
-
 // * ESSA FUNÇÃO ZERA A PÁGINA
 function resetPage (){
     bodyDom.innerHTML = `<header><h1>BuzzQuizz</h1></header>`;
@@ -52,5 +51,3 @@ function loadWebAndList (response){
         </li>`;
     })
 }
-
-
