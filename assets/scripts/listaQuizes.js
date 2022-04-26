@@ -13,31 +13,35 @@ function takeQuizzesApi() {
     const promiseApi = axios.get(`${API}`);
     promiseApi.then(loadWebAndList);
 }
-// * FUNÇÃO QUE CARREGA TODA A TELA01 COM AS QUIZZES
-function loadWebAndList (response){
-    console.log('Quizes api carregou OK!');
-    bodyDom.innerHTML += `
+function loadQuizzesUser (){
+    if (localStorage.length === 0){
+        c('Sem quizzes do usuário');
+        bodyDom.innerHTML += `
+        <main class="screenList">
+            <div class="quizzesUserEmpty">
+                <p>Você não criou nenhum <br> quizz ainda :(</p>
+                <button onclick="createQuizz()">Criar Quizz</button>
+            </div>
 
-    <main class="screenList">
-        <div class="quizzesUserEmpty">
-            <p>Você não criou nenhum <br> quizz ainda :(</p>
-            <button onclick="iniciarCriação()">Criar Quizz</button>
-        </div>
+            <div class="quizzesUser hidden"></div>
 
-        <div class="quizzesUser hidden"></div>
-
-        <div class="quizzesContainer">
+            <div class="quizzesContainer">
 
             <h2>Todos os Quizzes</h2>
-
             <br>
-
             <ul class="quizzesList">
             </ul>
 
-        </div>
-    </main>
-    `
+            </div>
+        </main>`
+    } else {
+        c('tem quizzes do use pra renderizar');
+    }
+}
+// * FUNÇÃO QUE CARREGA TODA A TELA01 COM AS QUIZZES
+function loadWebAndList (response){
+    console.log('Quizes api e quizzes user, carregou OK!');
+    loadQuizzesUser();
     const apiData = response.data;
     console.log('Quizze, dados da api: ',apiData);
     const containerQuizzesList = document.querySelector(".quizzesList");

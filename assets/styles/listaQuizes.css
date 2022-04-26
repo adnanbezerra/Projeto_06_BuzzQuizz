@@ -88,6 +88,9 @@ header h1 {
     position: relative;
     cursor: pointer;
 }
+.quizzesList >li:hover{
+    border: 1px solid green;
+}
 .quizzesList > img {
     display: flex;
 }
@@ -98,5 +101,6 @@ header h1 {
     bottom: 8px;
     font-size: 19px;
     text-align: center;
+    word-break: break-word;
 }
 

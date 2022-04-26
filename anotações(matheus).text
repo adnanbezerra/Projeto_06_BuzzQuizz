@@ -49,3 +49,96 @@
         </p>
     </div>
 </div>
+
+
+{
+    id: 899,
+    title: "",
+    image: "",
+    questions: [
+      {title: Quem criou o sistema operacional Linux? ,
+        color: #000000,
+        answers: [
+          {
+            text: Linus Torvalds,
+            image: https://programadoresbrasil.com.br/wp-content/uploads/2020/07/torvalds_in_nature.jpg,
+            isCorrectAnswer: true
+          },
+          {
+            text: Bill Gates,
+            image: https://conteudo.imguol.com.br/c/tab/85/2020/07/07/o-empresario-e-filantropo-bill-gates-1594123769189_v2_615x300.jpg,
+            isCorrectAnswer: false
+          },
+          {
+            text: Martin Fowler,
+            image: https://martinfowler.com/img/mf-dallas.jpg,
+            isCorrectAnswer: false
+          },
+          {
+            text: Robert C. Martin,
+            image: https://upload.wikimedia.org/wikipedia/commons/2/27/Robert_C._Martin_surrounded_by_computers.jpg,
+            isCorrectAnswer: false
+          }
+        ]},
+      {title: Qual dessas tecnologias foi criada pelo Facebook?,
+        color: #3b5998,
+        answers: [
+          {
+            text: React,
+            image: https://miro.medium.com/max/3840/1*vHHBwcUFUaHWXntSnqKdCA.png,
+            isCorrectAnswer: true
+          },
+          {
+            text: Javascript,
+            image: https://miro.medium.com/max/1200/1*ahpxPO0jLGb9EWrY2qQPhg.jpeg,
+            isCorrectAnswer: false
+          },
+          {
+            text: Postgres,
+            image: https://miro.medium.com/max/765/1*EqIzKO1Nl4vjkK2Bss-35g.png,
+            isCorrectAnswer: false
+          },
+          {
+            text: Git,
+            image: https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Git-logo.svg/1200px-Git-logo.svg.png,
+            isCorrectAnswer: false
+          }
+        ]},
+        {
+        title: O bootcamp do Respode Aí te leva do zero ao...?,
+        color: #000000,
+        answers: [
+          {
+            text: Ao emprego dos sonhos!,
+            image: https://www.blendit.com/wp-content/uploads/2018/08/low-code-o-que-e.jpg,
+            isCorrectAnswer: true
+          },
+          {
+            text: A algum lugar.,
+            image: https://www.ionos.co.uk/digitalguide/fileadmin/DigitalGuide/Teaser/code-editoren-t.jpg,
+            isCorrectAnswer: false
+          },
+          {
+            text: ao básico. ,
+            image: https://www.ionos.co.uk/digitalguide/fileadmin/DigitalGuide/Teaser/code-editoren-t.jpg,
+            isCorrectAnswer: false
+          },
+          {
+            text: Não sei...,
+            image: https://sam24h.com.br/wp-content/uploads/2020/09/tem-duvida-de-como-o-sam-funciona-20200812133307.jpg.jpg,
+            isCorrectAnswer: false
+          }
+        ]
+      }
+    ],
+    levels: [  {
+        title: title,
+        image: image,
+        text: texto level,
+        minValue: 0  
+        },
+      {title: Sabe tudo!!! Já ta por dentro da oportunidade!,
+        image: https://specials-images.forbesimg.com/imageserve/5f302109ffad89f9130e07db/960x0.jpg?cropX1=0&cropX2=4800&cropY1=243&cropY2=2943,
+        text: Já está super por dentro da oportunidade da década! Você está no caminho para se tornar um dev de desempenho e ter o emprego dos sonhos! ,
+        minValue: 90}   ]
+}
