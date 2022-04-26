@@ -15,8 +15,9 @@
 
     margin: 4px 0;
 }
+
 .comece {
-    margin: 70px 0;
+    margin: 140px 0;
 
     display: flex;
     justify-content: center;
@@ -38,4 +39,56 @@
     background-color: #EC362D;
     font-size: 21px;
     color: #FFF5F4;
+
+    cursor: pointer;
+}
+
+.questionario > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.tituloPergunta {
+    color: #000000;
+    font-style: bold;
+    font-size: 20px;
+}
+
+.questionario > div > input {
+    height: 46px;
+    padding-left: 24px;
+
+    margin-top: 14px;
+
+    border: 1px solid #D1D1D1;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+::placeholder {
+    color: #BABABA;
+    font-size: 19px;
+    font-style: italic;
+
+}
+
+.questionario {
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    padding: 27px 17px;
+}
+
+.correta, .incorreta {
+    margin-top: 25px;
+}
+
+.retornoTelaInicial {
+    color: #818181;
+    font-size: 21px;
+    margin-top: 10px;
 }
